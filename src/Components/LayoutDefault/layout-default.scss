@@ -1,0 +1,30 @@
+.layout-default{
+    .link{
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+        &-box{
+            padding: 5px 15px;
+        }
+        &-active{
+            color: white;
+        }
+    }
+    &__header{
+        background: orange;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        font-size: 26px;
+        font-weight: 700;
+    }
+    &__items{
+        display: flex;
+        justify-content: space-around;
+    }
+    
+}

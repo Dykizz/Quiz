@@ -1,0 +1,19 @@
+{
+  "accounts": [
+    {
+      "id": "1",
+      "username": "Phutainek",
+      "password": "12345678",
+      "email": "phutai@gamil.com",
+      "token": "Gjk8ia5L9zhja8Hbh1asuc3F"
+    },
+    {
+      "id": "4a78",
+      "email": "phamhuong@gmail.com",
+      "username": "phamhuong",
+      "password": "behuong",
+      "repassword": "behuong",
+      "token": "3poJa5eG5UzYPX6sGEbzT4cm"
+    }
+  ]
+}

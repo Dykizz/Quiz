@@ -43,6 +43,7 @@ function LayoutDefault() {
                     token && (<div className="layout-default__items ">
                         <NavLink className={linkActive} to='/home' >Home</NavLink>
                         <NavLink className={linkActive} to='/topic' >Topic</NavLink>
+                        <NavLink className={linkActive} to= '/answers'>Answers</NavLink>
                     </div>)
                 }
 

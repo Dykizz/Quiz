@@ -48,7 +48,7 @@ function CreateQuestionForm(props){
         const inforNewQuestion = {
             topicId : e.topicId,
             question: e.question,
-            answers : [e.answer1,e.answer2,e.answer3,e.answer3],
+            answers : [e.answer1,e.answer2,e.answer3,e.answer4],
             correctAnswer : e.correctAnswer
         }
         const result =await addQuestion(inforNewQuestion);
@@ -92,7 +92,7 @@ function CreateQuestionForm(props){
                     <Form.Item name="answer3" label="Đáp án 3" rules={rules}>
                         <Input autoComplete='off' />
                     </Form.Item>
-                    <Form.Item name="answer4" label="Đáp án 4" rules={rules}>
+                    <Form.Item name="answer4" label="Đáp án 4" >
                         <Input autoComplete='off' />
                     </Form.Item>
                     <Form.Item name="correctAnswer" label="Đáp án đúng" rules={rules}>

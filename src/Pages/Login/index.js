@@ -35,6 +35,7 @@ function PageLogin() {
             setCookie("username",account.username,0.05);
             setCookie("email",result[0].email,0.05);
             setCookie("token",result[0].token,0.05);
+            setCookie("userId",result[0].id,0.05);
             navigate("/home");
         }else{
             errorNotification("Tài khoản hoặc mật khẩu không chính xác!");

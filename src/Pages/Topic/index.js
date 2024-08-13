@@ -24,7 +24,7 @@ function PageTopic() {
         key: "action",
         render: (_, record) => (
             <>
-                <Link to='/quiz'> Làm bài</Link>
+                <Link to={`/topic/${record.id}`} > Làm bài</Link>
             </>
         )
     }]

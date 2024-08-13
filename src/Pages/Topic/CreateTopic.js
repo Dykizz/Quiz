@@ -40,7 +40,7 @@ function CreateTopic() {
     }
     const handleSubmit = async (topic) => {
         const checkTopicExist = await checkTopic(topic);
-        if (checkTopicExist) {
+        if (checkTopicExist.length > 0) {
             errorNotification("Chủ đề đã tồn tại!");
             return;
         }
@@ -69,10 +69,7 @@ function CreateTopic() {
                     <div style={{ display: "flex", justifyContent: 'center' }}>
                         <Button type='primary' htmlType='submit' >Tạo</Button>
                     </div>
-
-
                 </Form>
-
             </Modal>
         </>
     );

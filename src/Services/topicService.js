@@ -8,4 +8,9 @@ export const addTopic = async (topic) =>{
     const path  = `topics?name=${topic.name}`;
     const result = await get(path);
     return result;
- }
+}
+export const getNameTopicById = async (id)=>{
+    const path = 'topics/'+ id;
+    const result = await get(path);
+    return result.name;
+}

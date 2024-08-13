@@ -63,51 +63,543 @@
     },
     {
       "id": "3d2a",
-      "name": "CSS"
+      "name": "CSS3"
     },
     {
       "id": "e8c2",
       "name": "ReactJs"
+    },
+    {
+      "id": "c1bd",
+      "name": "Javascript"
     }
-    
   ],
   "questions": [
     {
-      "id": "330f",
+      "id": "2522",
+      "topicId": "s1k9",
+      "question": "HTML là viết tắt của...",
+      "answers": [
+        "Hyperlinks and Text Markup Language",
+        "Home Tool Markup Language",
+        "Hyper Text Markup Language",
+        null
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": "8084",
       "topicId": "s1k9",
       "question": "Ai là người đưa ra các tiêu chuẩn Web?",
       "answers": [
         "Tổ chức World Wide Web Consortium (W3C)",
         "Apple",
         "Google",
-        "Google"
+        "Microsoft"
       ],
       "correctAnswer": 1
     },
     {
-      "id": "4aa5",
+      "id": "6d59",
       "topicId": "s1k9",
       "question": "Chọn thẻ HTML đúng nhất cho định dạng tiêu đề lớn nhất?",
       "answers": [
         "<h6>",
         "<h1>",
         "<head>",
-        "<head>"
+        "<heading>"
       ],
       "correctAnswer": 2
     },
     {
-      "id": "dedd",
+      "id": "a52a",
       "topicId": "s1k9",
       "question": "Thẻ nào dùng để xuống dòng trong HTML?",
       "answers": [
         "<enter>",
         "<br>",
         "<break>",
-        "<break>"
+        "<lb>"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": "42b7",
+      "topicId": "s1k9",
+      "question": "Mã HTML nào thực hiện việc thêm màu nền cho trang web?",
+      "answers": [
+        "<body style=\"background-color:red;\">",
+        "<body bg=\"red\">",
+        "<background>red</background>",
+        "<body style=\"color:red;\">"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": "cb9b",
+      "topicId": "s1k9",
+      "question": "Chọn thẻ HTML chính xác dùng để xác định văn bản quan trọng",
+      "answers": [
+        "<important>",
+        "<strong>",
+        "<b>",
+        "<i>"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": "332b",
+      "topicId": "s1k9",
+      "question": "Chọn thẻ HTML được dùng nhấn mạnh nội dung văn bản",
+      "answers": [
+        "<i>",
+        " <em>",
+        "<italic>",
+        "<b>"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": "0d07",
+      "topicId": "s1k9",
+      "question": "Mã HTML chính xác để tạo liên kết là...",
+      "answers": [
+        "<a name=\"https://quantrimang.com\">QuanTriMang</a>",
+        "<a href=\"https://quantrimang.com\">Quản Trị Mạng</a>",
+        "<a url=\"https://quantrimang.com\">Quản Trị Mạng</a>",
+        "<a>https://quantrimang.com</a>"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": "cf80",
+      "topicId": "s1k9",
+      "question": "Ký tự nào được dùng để biểu thị cho một thẻ đóng?",
+      "answers": [
+        "\\",
+        "/",
+        "^",
+        "*"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": "b6cb",
+      "topicId": "s1k9",
+      "question": "Mã HTML nào bạn sẽ dùng khi muốn mở link trên 1 tab hoặc cửa sổ mới?",
+      "answers": [
+        "<a href=\"https://quantrimang.com\" target=\"new\">",
+        "<a href=\"https://quantrimang.com\" new>",
+        "<a href=\"https://quantrimang.com\" target=\"_blank\">",
+        "<a href=\"https://quantrimang.com\" blank>"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": "c99a",
+      "topicId": "s1k9",
+      "question": "Những thẻ HTML nào dùng để định nghĩa cấu trúc của bảng?",
+      "answers": [
+        "<table><tr><tt>",
+        "<table><tr><td>",
+        "<table><head><tfoot>",
+        "<thead><body><tr>"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": "5a08",
+      "topicId": "s1k9",
+      "question": "Để tạo một danh sách có dấu đầu dòng, bạn dùng thẻ HTML nào?",
+      "answers": [
+        "<ul>",
+        "<list>",
+        "<lt>",
+        " <ol>"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": "665b",
+      "topicId": "s1k9",
+      "question": "Để tạo một danh sách đánh số, bạn dùng phần tử HTML nào?",
+      "answers": [
+        "<list>",
+        "<ul>",
+        "<ol>",
+        "<lt>"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": "07c4",
+      "topicId": "s1k9",
+      "question": "Thẻ HTML nào tạo ra một hộp kiểm (checkbox)?",
+      "answers": [
+        "<check>",
+        "<checkbox>",
+        "<input type=\"check\">",
+        "<input type=\"checkbox\">"
+      ],
+      "correctAnswer": 4
+    },
+    {
+      "id": "770f",
+      "topicId": "s1k9",
+      "question": "Thẻ HTML nào tạo ra một ô nhập dữ liệu văn bản?",
+      "answers": [
+        "<input type=\"textfield\">",
+        "<input type=\"text\">",
+        "<textinput type=\"text\">",
+        "<textfield>"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": "90b9",
+      "topicId": "s1k9",
+      "question": "Thẻ HTML nào tạo ra một danh sách thả xuống (drop-down list)?",
+      "answers": [
+        "<input type=\"list\">",
+        "<input type=\"dropdown\">",
+        "<select>",
+        "<list>"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": "cb9f",
+      "topicId": "s1k9",
+      "question": "Thẻ HTML nào tạo ra một ô nhập dữ liệu với nhiều dòng?",
+      "answers": [
+        "<input type=\"textarea\">",
+        "<textarea>",
+        "<input type=\"textbox\">",
+        "<textbox>"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": "bda0",
+      "topicId": "s1k9",
+      "question": "Thẻ HTML nào dùng để chèn một hình ảnh?",
+      "answers": [
+        "<image src=\"image.gif\" alt=\"Ảnh đẹp\">",
+        "<img href=\"image.gif\" alt=\"Ảnh đẹp\">",
+        "<img src=\"image.gif\" alt=\"Ảnh đẹp\">",
+        "<img alt=\"Ảnh đẹp\">image.gif</img>"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": "1fc8",
+      "topicId": "s1k9",
+      "question": "Mã HTML nào dùng để chèn một ảnh nền vào trang web?",
+      "answers": [
+        "<body bg=\"background.gif\">",
+        "<body style=\"background-image:url(background.gif)\">",
+        "<background img=\"background.gif\">",
+        "<img bg=\"background.gif\">"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": "66e1",
+      "topicId": "s1k9",
+      "question": "Thẻ HTML nào dùng để xác định tiêu đề của một trang?",
+      "answers": [
+        "<meta>",
+        "<head>",
+        "<header>",
+        "<title>"
+      ],
+      "correctAnswer": 4
+    },
+    {
+      "id": "15ec",
+      "topicId": "s1k9",
+      "question": "Thuộc tính HTML nào chỉ định văn bản thay thế cho hình ảnh, nếu hình ảnh không thể hiển thị?",
+      "answers": [
+        "title",
+        "src",
+        "alt",
+        "longdesc"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": "a6dd",
+      "topicId": "s1k9",
+      "question": "DOCTYPE nào đúng với HTML5?",
+      "answers": [
+        "<!DOCTYPE HTML5>",
+        "<!DOCTYPE html>",
+        "<!DOCTYPE type='html5'>",
+        "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 5.0//EN\" \"http://www.w3.org/TR/html5/strict.dtd\">"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": "b31a",
+      "topicId": "s1k9",
+      "question": "Thẻ HTML nào được sử dụng để chỉ định chân trang của 1 trang web?",
+      "answers": [
+        "<section>",
+        "<footer>",
+        "<bottom>",
+        null
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": "b97d",
+      "topicId": "s1k9",
+      "question": "Thẻ HTML dùng để chạy một file video là gì?",
+      "answers": [
+        "<media>",
+        "<movie>",
+        "<video>",
+        "<play>"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": "da4a",
+      "topicId": "s1k9",
+      "question": "Thẻ HTML dùng để chạy một file audio là gì?",
+      "answers": [
+        "<audio>",
+        "<mp3>",
+        "<play>",
+        "<sound>"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": "3622",
+      "topicId": "s1k9",
+      "question": "Thuộc tính HTML \"contenteditable\" được dùng để:",
+      "answers": [
+        "Cập nhật nội dung từ máy chủ",
+        "Chỉ định menu ngữ cảnh cho một phần tử. Menu xuất hiện khi người dùng nhấp chuột phải vào phần tử",
+        "Chỉ định nội dung của một phần tử có thể chỉnh sửa được hay không",
+        "Trả lại vị trí lỗi xuất hiện đầu tiên của nội dung bên trong một chuỗi"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": "b2e5",
+      "topicId": "s1k9",
+      "question": "Trong HTML, onblur và onfocus là:",
+      "answers": [
+        "Phần tử HTML",
+        "Thuộc tính Event",
+        "Thuộc tính Style",
+        null
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": "67fe",
+      "topicId": "s1k9",
+      "question": "Đồ họa do SVG định nghĩa có trong định dạng nào?",
+      "answers": [
+        "XML",
+        "HTML",
+        "CSS",
+        null
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": "3695",
+      "topicId": "s1k9",
+      "question": "Thẻ <canvas> của HTML được sử dụng để:",
+      "answers": [
+        "Thao tác dữ liệu trong SQL",
+        "Tạo các phần tử có thể kéo được",
+        "Vẽ đồ họa",
+        "Hiển thị bản ghi CSDL"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": "c944",
+      "topicId": "s1k9",
+      "question": "Trong HTML, thuộc tính nào được sử dụng để chỉ định rằng dữ liệu này bắt buộc phải điền?",
+      "answers": [
+        "formvalidate",
+        "required",
+        "placeholder",
+        "validate"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": "8586",
+      "topicId": "s1k9",
+      "question": "Loại input nào xác định điều khiển slider?",
+      "answers": [
+        "slider",
+        "range",
+        "controls",
+        "search"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": "4525",
+      "topicId": "s1k9",
+      "question": "Thẻ HTML nào được sử dụng để hiển thị phép đo vô hướng trong một range?",
+      "answers": [
+        "<meter>",
+        "<measure>",
+        "<range>",
+        "<gauge>"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": "4da6",
+      "topicId": "s1k9",
+      "question": "Thẻ HTML nào xác định các liên kết là liên kết điều hướng trang web (danh mục)?",
+      "answers": [
+        "<nav>",
+        "<navigate>",
+        "<navigation>",
+        null
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": "684b",
+      "topicId": "s1k9",
+      "question": "Trong HTML, thẻ <aside> dùng để xác định điều gì?",
+      "answers": [
+        "Danh sách điều hướng sẽ được hiển thị ở bên trái của trang",
+        "Định nghĩa nội dung bên ngoài nội dung chính",
+        "Bộ ký tự ASCII; để gửi thông tin giữa các máy tính trên Internet",
+        null
       ],
       "correctAnswer": 2
     }
   ],
-  "answers": []
+  "answers": [
+    {
+      "id": "34b0",
+      "topicId": "s1k9",
+      "nameTopic": "HTML5",
+      "username": "ThuanNguyen",
+      "userId": "137f",
+      "timesubmit": "00:28:58 14/8/2024",
+      "answers": [
+        {
+          "questionId": "2522",
+          "answer": "1"
+        },
+        {
+          "questionId": "8084",
+          "answer": "3"
+        },
+        {
+          "questionId": "6d59",
+          "answer": "3"
+        },
+        {
+          "questionId": "a52a",
+          "answer": "4"
+        },
+        {
+          "questionId": "42b7"
+        },
+        {
+          "questionId": "cb9b"
+        },
+        {
+          "questionId": "332b"
+        },
+        {
+          "questionId": "0d07"
+        },
+        {
+          "questionId": "cf80"
+        },
+        {
+          "questionId": "b6cb"
+        },
+        {
+          "questionId": "c99a"
+        },
+        {
+          "questionId": "5a08"
+        },
+        {
+          "questionId": "665b"
+        },
+        {
+          "questionId": "07c4"
+        },
+        {
+          "questionId": "770f"
+        },
+        {
+          "questionId": "90b9"
+        },
+        {
+          "questionId": "cb9f"
+        },
+        {
+          "questionId": "bda0"
+        },
+        {
+          "questionId": "1fc8"
+        },
+        {
+          "questionId": "66e1"
+        },
+        {
+          "questionId": "15ec"
+        },
+        {
+          "questionId": "a6dd"
+        },
+        {
+          "questionId": "b31a"
+        },
+        {
+          "questionId": "b97d"
+        },
+        {
+          "questionId": "da4a"
+        },
+        {
+          "questionId": "3622"
+        },
+        {
+          "questionId": "b2e5"
+        },
+        {
+          "questionId": "67fe"
+        },
+        {
+          "questionId": "3695"
+        },
+        {
+          "questionId": "c944"
+        },
+        {
+          "questionId": "8586"
+        },
+        {
+          "questionId": "4525"
+        },
+        {
+          "questionId": "4da6"
+        },
+        {
+          "questionId": "684b"
+        }
+      ]
+    }
+  ]
 }

@@ -1,4 +1,4 @@
-import { Button, Form, Input, Modal } from 'antd'
+import { Button, Form, Input, Modal, notification} from 'antd'
 import { useEffect, useState } from 'react';
 import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux'
@@ -7,7 +7,6 @@ import { userLogin } from '../../Services/userService';
 import { setCookie } from '../../helpers/cookie';
 import {UserOutlined, LockOutlined} from '@ant-design/icons'
 function PageLogin() {
-    
     const rules = [{
         required: true,
         message: 'Bắt buộc nhập phần này!',
@@ -16,6 +15,16 @@ function PageLogin() {
     const dispatch = useDispatch();
     const user = useSelector(state => state.accountReducer);
     const [isModalOpen, setIsModalOpen] = useState(true);
+    const [api, contextHolder] = notification.useNotification();
+    const errorNotification = (message) => {
+        api.open({
+          message: 'Đăng nhập không thành công!',
+          type: 'error',
+          description:
+            message,
+          duration: 2,
+        });
+    };
     useEffect(()=>{
         if (user.status) setIsModalOpen(false);
     },[])
@@ -26,12 +35,13 @@ function PageLogin() {
             setCookie("username",account.username,0.05);
             setCookie("email",result[0].email,0.05);
             setCookie("token",result[0].token,0.05);
-            navigate("/home")
+            navigate("/home");
         }else{
-            console.log("Đăng nhập không thành công!");
+            errorNotification("Tài khoản hoặc mật khẩu không chính xác!");
         }
     }
     return (<>
+        {contextHolder}
         <Modal 
             title='Đăng nhập' 
             open={isModalOpen} 
@@ -49,7 +59,7 @@ function PageLogin() {
                     name= 'password'
                     rules={rules}
                 >
-                    <Input prefix={<LockOutlined />} type="password" placeholder="Password"  />
+                    <Input.Password prefix={<LockOutlined />}  placeholder="Password" />
                 </Form.Item>
                 <Form.Item name='buttonSubmit' style={{display: "flex", justifyContent: 'center'}}>
                     <Button type='primary' htmlType='submit'>Đăng nhập</Button>

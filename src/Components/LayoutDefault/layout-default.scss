@@ -19,8 +19,11 @@
         align-items: center;
     }
     &__logo{
-        font-size: 26px;
-        font-weight: 700;
+        .link{
+            font-size: 26px;
+            font-weight: 700;
+        }
+        
     }
     &__items{
         display: flex;

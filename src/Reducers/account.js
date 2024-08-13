@@ -18,4 +18,4 @@ export const accountReducer = (state = stateBase,action)=>{
         default:
             return state;
     }
-}
+} 

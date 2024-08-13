@@ -2,9 +2,7 @@ import { Button, Form, Input, Modal, notification } from 'antd'
 import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux'
-import { Login } from '../../Actions/account';
 import { checkAccountExist, createAccount, randomToken, userLogin } from '../../Services/userService';
-import { setCookie } from '../../helpers/cookie';
 import { NavLink } from 'react-router-dom';
 function PageRegister() {
     const rule = {
@@ -35,13 +33,11 @@ function PageRegister() {
     const dispatch = useDispatch();
     const [isModalOpen, setIsModalOpen] = useState(true);
     const handleSubmit = async (account) => {
-        console.log(account)
         if (account.password !== account.repassword){
             errorNotification("Hai mật khẩu không trùng nhau!");
             return;
         }
         const checkExist = await checkAccountExist(account.email,account.username);
-        
         if (checkExist){
             errorNotification("Username hoặc Email đã được đăng kí!");
             form.resetFields();
@@ -49,15 +45,17 @@ function PageRegister() {
         }
         const newToken = randomToken();
         account = {...account,token : newToken};
-        const result = createAccount(account);
+        const result = await createAccount(account);
         if (result){
             successNotification("Bạn đã tạo tài khoản thành công!");
             form.resetFields();
             setIsModalOpen(false);
+            setTimeout(()=>{
+                navigate('/login');
+            },1000);
         }else{
             errorNotification("Quá trình tạo tài khoản trục trặc!");
         }
-
     }
     const formItemLayout = {
         labelCol: {
@@ -100,8 +98,8 @@ function PageRegister() {
                     label='Mật khẩu lần 1 '
                     name='password'
                     rules={[rule,
-                        { min: 7, message: 'Username phải có ít nhất 7 ký tự!' },
-                        { max: 15, message: 'Username không được vượt quá 15 ký tự!' }
+                        { min: 7, message: 'Password phải có ít nhất 7 ký tự!' },
+                        { max: 15, message: 'Password không được vượt quá 15 ký tự!' }
                     ]}
                 >
                     <Input.Password />

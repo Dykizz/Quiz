@@ -6,6 +6,7 @@ import PageTopic from '../Pages/Topic';
 import NotFound from '../Pages/NotFound'
 import { useSelector } from 'react-redux';
 import { getCookie } from '../helpers/cookie';
+import DoExam from '../Pages/Topic/DoExam';
 export const Routers =()=>{
     const user = useSelector(state => state.accountReducer);
     const token = getCookie("token");
@@ -17,6 +18,7 @@ export const Routers =()=>{
                 ? [
                     { path: 'home', element: <PageHome /> },
                     { path: 'topic', element: <PageTopic /> },
+                    { path: 'quiz', element: <DoExam/>},
                     { path: '*', element: <NotFound/>},
                   ]
                 : [

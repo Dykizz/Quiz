@@ -22,5 +22,5 @@ export const randomToken = ()=>{
 }
 export const createAccount = async (account) =>{
     const result = await post("accounts",account);
-    return result.length > 0;
+    return result ;
 }

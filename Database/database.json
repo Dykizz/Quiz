@@ -600,6 +600,152 @@
           "questionId": "684b"
         }
       ]
+    },
+    {
+      "id": "0430",
+      "topicId": "s1k9",
+      "nameTopic": "HTML5",
+      "username": "ThuanNguyen",
+      "userId": "137f",
+      "timesubmit": "16:48:25 14/8/2024",
+      "answers": [
+        {
+          "questionId": "2522",
+          "answer": "3"
+        },
+        {
+          "questionId": "8084",
+          "answer": "1"
+        },
+        {
+          "questionId": "6d59",
+          "answer": "2"
+        },
+        {
+          "questionId": "a52a",
+          "answer": "2"
+        },
+        {
+          "questionId": "42b7",
+          "answer": "1"
+        },
+        {
+          "questionId": "cb9b",
+          "answer": "2"
+        },
+        {
+          "questionId": "332b",
+          "answer": "2"
+        },
+        {
+          "questionId": "0d07",
+          "answer": "2"
+        },
+        {
+          "questionId": "cf80",
+          "answer": "2"
+        },
+        {
+          "questionId": "b6cb",
+          "answer": "3"
+        },
+        {
+          "questionId": "c99a",
+          "answer": "2"
+        },
+        {
+          "questionId": "5a08",
+          "answer": "1"
+        },
+        {
+          "questionId": "665b",
+          "answer": "3"
+        },
+        {
+          "questionId": "07c4",
+          "answer": "4"
+        },
+        {
+          "questionId": "770f",
+          "answer": "2"
+        },
+        {
+          "questionId": "90b9",
+          "answer": "3"
+        },
+        {
+          "questionId": "cb9f",
+          "answer": "1"
+        },
+        {
+          "questionId": "bda0",
+          "answer": "3"
+        },
+        {
+          "questionId": "1fc8",
+          "answer": "4"
+        },
+        {
+          "questionId": "66e1",
+          "answer": "2"
+        },
+        {
+          "questionId": "15ec",
+          "answer": "2"
+        },
+        {
+          "questionId": "a6dd",
+          "answer": "4"
+        },
+        {
+          "questionId": "b31a",
+          "answer": "3"
+        },
+        {
+          "questionId": "b97d",
+          "answer": "3"
+        },
+        {
+          "questionId": "da4a",
+          "answer": "3"
+        },
+        {
+          "questionId": "3622",
+          "answer": "3"
+        },
+        {
+          "questionId": "b2e5",
+          "answer": "2"
+        },
+        {
+          "questionId": "67fe",
+          "answer": "3"
+        },
+        {
+          "questionId": "3695",
+          "answer": "3"
+        },
+        {
+          "questionId": "c944",
+          "answer": "4"
+        },
+        {
+          "questionId": "8586",
+          "answer": "3"
+        },
+        {
+          "questionId": "4525",
+          "answer": "3"
+        },
+        {
+          "questionId": "4da6",
+          "answer": "3"
+        },
+        {
+          "questionId": "684b",
+          "answer": "3"
+        }
+      ]
     }
   ]
 }

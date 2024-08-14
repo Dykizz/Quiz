@@ -11,7 +11,7 @@ import Answers from '../Pages/Answers';
 import ResultDetail from '../Pages/ResultDetail';
 export const Routers =()=>{
     const user = useSelector(state => state.accountReducer);
-    const token = getCookie("token");
+    const token = getCookie("token").length === 24;
     const routes = [
         {
             path: '/',

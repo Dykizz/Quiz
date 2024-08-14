@@ -81,7 +81,6 @@ function Quiz() {
                         return <Form.Item
                             key={question.id}
                             name={`answer${index + 1}`}
-                            // rules={rules}
                         >
                             <div>
                                 <div>{`Câu ${index + 1}: ${question.question}`}</div>

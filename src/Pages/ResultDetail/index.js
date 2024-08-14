@@ -10,41 +10,61 @@ function ResultDetail() {
     const { id } = useParams();
     const [answerRecord, setAnswerRecord] = useState([]);
     const [questions, setQuestions] = useState([]);
+    const [resultRecord,setResultRecord] = useState({});
+    const handleGrading = (record,ans)=>{
+        let totalCorrect = ans.reduce((totalCorrect, element, index) => {
+            return totalCorrect + (element.correctAnswer == record.answers[index].answer ? 1 : 0);
+        }, 0);
+        let totalQuestion = ans.length;
+        let totalUncorrect = totalQuestion - totalCorrect;
+        let rate = (totalCorrect / totalQuestion * 100).toFixed(2) ;
+        setResultRecord({
+            totalQuestion : totalQuestion,
+            totalCorrect : totalCorrect,
+            totalUncorrect : totalUncorrect,
+            rate : rate
+        })
+    }
     useEffect(() => {
         const getAnswer = async () => {
-            const result = await getAnswerById(id);
-            setAnswerRecord(result);
-            console.log(result);
-            const resultTopic = await getQuestionsById(result.topicId);
+            const resultUser = await getAnswerById(id);
+            setAnswerRecord(resultUser);
+            const resultTopic = await getQuestionsById(resultUser.topicId);
             setQuestions(resultTopic);
-            console.log(resultTopic);
+            handleGrading(resultUser,resultTopic)
+            
         }
         getAnswer();
     }, []);
     const checkAns = (defaultans, correct, ans) => {
-        if (defaultans == correct) return ' correctAns';
-        if (defaultans == ans) {
-            if (correct == ans) return 'correctAns';
-            return 'errorAns';
-        }
-        return '';
+        if (defaultans == correct) return 'layout-result__ans layout-result__ans-correctAns';
+        if (defaultans === ans && correct != ans) 
+            return 'layout-result__ans layout-result__ans-errorAns';
+        return 'layout-result__ans';
     }
     return (
-        <>
-            {id}
-            <Form name="formResult" initialValues={answerRecord}>
+        <div className="layout-result">
+            
+            <div className="layout-result__title">
+                <h2>Kết quả chủ đề : {answerRecord.nameTopic}</h2>
+                <div className="layout-result__infor">
+                Đúng : <strong>{resultRecord.totalCorrect}</strong>  | 
+                 Sai : <strong>{resultRecord.totalUncorrect}</strong> |
+                 Tổng số câu : <strong>{resultRecord.totalQuestion}</strong> |
+                 Tỷ lệ đúng : <strong>{resultRecord.rate}%</strong> 
+                </div>
+            </div>
+            <Form name="formResult" initialValues={answerRecord} className="layout-result__form">
                 {
                     questions.map((question, index) => {
                         const correctAns = question.correctAnswer;
                         const ans = answerRecord.answers[index].answer;
-                        console.log(answerRecord.answers[index].answer, question.correctAnswer)
                         return <Form.Item
                             key={question.id}
                             name={`answer${index + 1}`}
                             initialValue={answerRecord.answers[index].answer}
                         >
-                            <div className="layout-default">
-
+                            <div className="layout-result__QA">
                                 <div style={{ display: 'flex' }}>{`Câu ${index + 1}: ${question.question}`}
                                     <div style={{ marginLeft: 10 }}>
                                         {
@@ -54,15 +74,13 @@ function ResultDetail() {
                                         }
                                     </div>
                                 </div>
-
-
                                 <Radio.Group value={answerRecord.answers[index].answer} >
                                     <Space direction="vertical">
-                                        <Radio value='1' className={checkAns(1, correctAns, ans)}>{`A. ${question.answers[0]}`}</Radio>
-                                        <Radio value='2' className={checkAns(2, correctAns, ans)}>{`B. ${question.answers[1]}`}</Radio>
-                                        <Radio value='3' className={checkAns(3, correctAns, ans)}>{`C. ${question.answers[2]}`}</Radio>
+                                        <Radio value='1' className={checkAns('1', correctAns, ans)}>{`A. ${question.answers[0]}`}</Radio>
+                                        <Radio value='2' className={checkAns('2', correctAns, ans)}>{`B. ${question.answers[1]}`}</Radio>
+                                        <Radio value='3' className={checkAns('3', correctAns, ans)}>{`C. ${question.answers[2]}`}</Radio>
                                         {question.answers[3] && (
-                                            <Radio value='4' className={checkAns(4, correctAns, ans)}>{`D. ${question.answers[3]}`}</Radio>
+                                            <Radio value='4' className={checkAns('4', correctAns, ans)}>{`D. ${question.answers[3]}`}</Radio>
                                         )}
                                     </Space>
                                 </Radio.Group>
@@ -71,7 +89,7 @@ function ResultDetail() {
                     })
                 }
             </Form>
-        </>
+        </div>
     );
 }
 export default ResultDetail;

@@ -9,7 +9,7 @@ function LayoutDefault() {
     const linkActive = (e) => {
         return e.isActive ? 'link link-box link-active' : 'link link-box';
     }
-    const token = getCookie("token");
+    const token = getCookie("token").length === 24;
     const user = useSelector(state => state.accountReducer) ;
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -59,7 +59,7 @@ function LayoutDefault() {
 
         </div>
             </header >
-        <main>
+        <main className='layout-default__main' >
             <Outlet /> 
 
         </main>

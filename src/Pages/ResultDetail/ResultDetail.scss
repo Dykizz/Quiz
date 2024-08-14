@@ -1,8 +1,36 @@
-.layout-default{
-    .correctAns {
-        color: green;
+.layout-result{
+    
+    &__title{
+        width: 900px;
+        margin-left: auto;
+        margin-right: auto;
     }
-    .errorAns {
-        color: red;
+    &__infor{
+        font-size: large;
+    }
+    &__form{
+        font-weight: 500;
+        width: 900px;
+        background-color: hsl(0, 0%, 96%);
+        border: 2px solid #908f8f;
+        border-radius: 8px;
+        padding: 20px 30px;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+    &__QA{
+        font-size: 18px;
+    }
+    &__ans{
+        font-size: 16px;
+        &-errorAns{
+            color: red;
+        }
+        &-correctAns{
+            color: green;
+            
+        }
     }
 }

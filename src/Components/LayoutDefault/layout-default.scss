@@ -1,4 +1,8 @@
+*{
+    box-sizing: border-box;
+}
 .layout-default{
+    position: relative;
     .link{
         color: black;
         text-decoration: none;
@@ -12,8 +16,13 @@
         }
     }
     &__header{
+        position: fixed;
+        top : 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
         background: orange;
-        padding: 20px;
+        padding: 20px 30px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -29,5 +38,11 @@
         display: flex;
         justify-content: space-around;
     }
-    
+    &__actions{
+        
+    }
+    &__main{
+        position: relative;
+        margin-top: 90px;
+    }
 }

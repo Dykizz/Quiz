@@ -11,7 +11,7 @@ function PageTopic() {
     const topics = useSelector(state => state.topicsReducer);
     const dispatch = useDispatch();
     const colums = [{
-        title: "Id",
+        title: "ID chủ đề",
         dataIndex: "id",
         key: "id"
     }, {
@@ -38,9 +38,12 @@ function PageTopic() {
 
     return (<>
         <div className='layout-topic' >
-            <h1> Danh sách chủ để ôn luyện</h1>
-            <CreateQuestionForm topics = {topics}/>
-            <CreateTopic/>
+            <h1> Danh sách chủ ôn đề luyện</h1>
+            <div className='layout-topic_buttons'>
+                <CreateQuestionForm topics = {topics}/>
+                <CreateTopic/>
+            </div>
+            
             <div className='layout-topic_table' >
                 <Table rowKey="id" dataSource={topics} columns={colums}></Table>
             </div>

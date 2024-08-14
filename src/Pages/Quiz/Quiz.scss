@@ -1,19 +1,8 @@
-.button-goback{
-    position: fixed;
-    top: 95px;
-    left: 10px;
-    z-index: 1;
-}
-
-.layout-result{
-    
+.layout-exam{
     &__title{
         width: 880px;
         margin-left: auto;
         margin-right: auto;
-    }
-    &__infor{
-        font-size: large;
     }
     &__form{
         font-weight: 500;
@@ -32,12 +21,5 @@
     }
     &__ans{
         font-size: 16px;
-        &-errorAns{
-            color: red;
-        }
-        &-correctAns{
-            color: green;
-            
-        }
     }
 }

@@ -1,11 +1,12 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { getQuestionsById } from "../../Services/questionService";
 import { useEffect, useState } from "react";
 import { getNameTopicById } from "../../Services/topicService";
-import { Button, Form, message, Radio, Space } from "antd";
+import { Button, Form, Radio, Space } from "antd";
 import { getCookie } from "../../helpers/cookie";
 import { addAnswers } from "../../Services/answerService";
 import { notification } from "antd";
+import './Quiz.scss'
 function Quiz() {
     const { id } = useParams();
     const [questions, setQuestions] = useState([]);
@@ -72,25 +73,26 @@ function Quiz() {
 
     }
     return (
-        <>
+        <div className="layout-exam">
             {contextHolder}
-            <h1>Bài Quiz chủ đề: {nameTopic}</h1>
-            <Form name="Answers" onFinish={handleSubmit}>
+            <h1 className="layout-exam__title">Bài Quiz chủ đề: {nameTopic}</h1>
+            <Form className="layout-exam__form" name="Answers" onFinish={handleSubmit}>
                 {
                     questions.map((question, index) => {
                         return <Form.Item
                             key={question.id}
                             name={`answer${index + 1}`}
+                            rules={rules}
                         >
-                            <div>
+                            <div className="layout-exm__QA">
                                 <div>{`Câu ${index + 1}: ${question.question}`}</div>
-                                <Radio.Group>
+                                <Radio.Group >
                                     <Space direction="vertical">
-                                        <Radio value={1}>{`A. ${question.answers[0]}`}</Radio>
-                                        <Radio value={2}>{`B. ${question.answers[1]}`}</Radio>
-                                        <Radio value={3}>{`C. ${question.answers[2]}`}</Radio>
+                                        <Radio className="layout-exam__ans" value={1}>{`A. ${question.answers[0]}`}</Radio>
+                                        <Radio className="layout-exam__ans" value={2}>{`B. ${question.answers[1]}`}</Radio>
+                                        <Radio className="layout-exam__ans" value={3}>{`C. ${question.answers[2]}`}</Radio>
                                         {question.answers[3] && (
-                                            <Radio value={4}>{`D. ${question.answers[3]}`}</Radio>
+                                            <Radio className="layout-exam__ans" value={4}>{`D. ${question.answers[3]}`}</Radio>
                                         )}
                                     </Space>
                                 </Radio.Group>
@@ -98,11 +100,19 @@ function Quiz() {
                         </Form.Item>
                     })
                 }
-                <div>
-                    <Button type="primary" htmlType="submit">Nộp bài</Button>
-                </div>
+                {
+                    questions.length > 0 ? 
+                    <div>
+                        <Button type="primary" htmlType="submit">Nộp bài</Button>
+                    </div> :
+                    <div>
+                        <h3>Hiện chưa có câu hỏi để làm bài!</h3>
+                        <Link to= '/topic'>Quay trở về</Link>
+                    </div>
+                }
+                
             </Form>
-        </>
+        </div>
     );
 }
 export default Quiz;

@@ -482,6 +482,126 @@
         null
       ],
       "correctAnswer": 2
+    },
+    {
+      "id": "d864",
+      "topicId": "3d2a",
+      "question": "CSS là viết tắt của?",
+      "answers": [
+        "Creative Style Sheets",
+        "Computer Style Sheets",
+        "Cascading Style Sheets",
+        "Colorful Style Sheets"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": "9c80",
+      "topicId": "3d2a",
+      "question": " Muốn liên kết file HTML với file định nghĩa CSS ta dùng dòng nào sau đây?",
+      "answers": [
+        "<style src=”mystyle.css”>",
+        "<stylesheet>mystyle.css</stylesheet>",
+        "<link rel=”stylesheet” type=”text/css” href=”mystyle.css”>",
+        "Tất cả đều đúng"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": "d21e",
+      "topicId": "3d2a",
+      "question": "Thuộc tính nào định nghĩa CSS ngay trong 1 tag?",
+      "answers": [
+        "font",
+        "class",
+        "style",
+        "styles"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": "de89",
+      "topicId": "3d2a",
+      "question": "Đặt dòng liên kết với file CSS ở vùng nào trong file HTML?",
+      "answers": [
+        "Trong thẻ <body>",
+        "Trong thẻ <head>",
+        "Ở cuối file HTML",
+        "Ở đầu file HTML"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": "1778",
+      "topicId": "3d2a",
+      "question": "Làm sao để khi click chuột vào link thì tạo ra cửa sổ mới?",
+      "answers": [
+        "<a href=\"url\" new>",
+        "<a href=\"url\" target=\"new\">",
+        "<a href=\"url\" target=\"_blank\">",
+        "<a href=\"url\"blank=\"new\">"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": "5015",
+      "topicId": "3d2a",
+      "question": "Đâu là những tag dành cho việc tạo bảng?",
+      "answers": [
+        "<table><tr><td>",
+        "<thead><body><tr>",
+        "<table><head><tfoot>",
+        "<table><tr><tt>"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": "86a2",
+      "topicId": "3d2a",
+      "question": "Đâu là tag căn lề trái cho nội dung 1 ô trong bảng",
+      "answers": [
+        "<tdleft>",
+        "<td valign=\"left\">",
+        "<td align=\"left\">",
+        "<td leftalign>"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": "7797",
+      "topicId": "3d2a",
+      "question": "Đâu là tag tạo ra 1 danh sách đứng đầu bằng số",
+      "answers": [
+        "<ul>",
+        "<list>",
+        "<ol>",
+        "<dl>"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": "f49b",
+      "topicId": "3d2a",
+      "question": "Tag nào tạo ra 1 checkbox?",
+      "answers": [
+        "<check>",
+        "<input type=\"check\">",
+        "<checkbox>",
+        "<input type=\"checkbox\">"
+      ],
+      "correctAnswer": 4
+    },
+    {
+      "id": "362b",
+      "topicId": "3d2a",
+      "question": "Muốn liên kết xHTML với 1 file định nghĩa CSS ta dùng dòng nào sau đây?",
+      "answers": [
+        "<style src=\"mystyle.css\">",
+        "<stylesheet>mystyle.css</stylesheet>",
+        "<link rel=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\">",
+        "<link rel=\"stylesheet\" style src=\"style.css\" type=type=\"text/css\">"
+      ],
+      "correctAnswer": 3
     }
   ],
   "answers": [
@@ -743,6 +863,56 @@
         },
         {
           "questionId": "684b",
+          "answer": "3"
+        }
+      ]
+    },
+    {
+      "id": "98b1",
+      "topicId": "3d2a",
+      "nameTopic": "CSS3",
+      "username": "ThuanNguyen",
+      "userId": "137f",
+      "timesubmit": "22:14:01 14/8/2024",
+      "answers": [
+        {
+          "questionId": "d864",
+          "answer": "3"
+        },
+        {
+          "questionId": "9c80",
+          "answer": "3"
+        },
+        {
+          "questionId": "d21e",
+          "answer": "3"
+        },
+        {
+          "questionId": "de89",
+          "answer": "1"
+        },
+        {
+          "questionId": "1778",
+          "answer": "3"
+        },
+        {
+          "questionId": "5015",
+          "answer": "1"
+        },
+        {
+          "questionId": "86a2",
+          "answer": "3"
+        },
+        {
+          "questionId": "7797",
+          "answer": "3"
+        },
+        {
+          "questionId": "f49b",
+          "answer": "4"
+        },
+        {
+          "questionId": "362b",
           "answer": "3"
         }
       ]

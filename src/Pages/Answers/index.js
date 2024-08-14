@@ -1,17 +1,16 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { get } from "../../utils/request";
 import { getCookie } from "../../helpers/cookie";
 import { getAnswersByIdUser } from "../../Services/answerService";
 import { Table } from "antd";
 import { Link } from "react-router-dom";
+import './Answers.scss'
 function Answers() {
     const [answers, setAnswers] = useState([]);
     useEffect(() => {
         const getAnswers = async () => {
             const userId = getCookie("userId");
             const result = await getAnswersByIdUser(userId);
-            setAnswers(result);
+            setAnswers(result.reverse());
         }
         getAnswers();
     }, []);
@@ -38,10 +37,10 @@ function Answers() {
         )
     }]
     return (
-        <>
+        <div className="layout-answers">
             <h2>Lịch sử làm bài</h2>
-            <Table rowKey="id" dataSource={answers} columns={colums}></Table>
-        </>
+            <Table className="layout-answers_table" rowKey="id" dataSource={answers} columns={colums}></Table>
+        </div>
     );
 }
 export default Answers;

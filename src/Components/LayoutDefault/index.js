@@ -5,6 +5,7 @@ import { getCookie } from '../../helpers/cookie';
 import {Button, notification} from 'antd'
 import {Logout} from '../../Actions/account.js'
 import { useEffect } from 'react';
+import { LogoutOutlined } from '@ant-design/icons'
 function LayoutDefault() {
     const linkActive = (e) => {
         return e.isActive ? 'link link-box link-active' : 'link link-box';
@@ -50,7 +51,12 @@ function LayoutDefault() {
                 <div className='layout-default__actions'>
                     {
                         token ? 
-                        (<Button danger onClick={handleLogout}>Đăng xuất</Button>) : 
+                        (<Button 
+                            danger onClick={handleLogout} 
+                            icon = {<LogoutOutlined style={{color : 'red', fontSize: 20}}
+                            />}
+                            style={{fontSize: 16, fontWeight: 500}}
+                        >Đăng xuất</Button>) : 
                         (<>
                             <NavLink className={linkActive} to='/login' >Login</NavLink>
                             <NavLink className={linkActive} to='/register' >Register</NavLink>
@@ -60,6 +66,7 @@ function LayoutDefault() {
         </div>
             </header >
         <main className='layout-default__main' >
+            {!token && <h2>Hiện tại bạn chưa đăng nhập. Hãy đăng nhập để có thể truy cập vào Quiz!</h2> }
             <Outlet /> 
 
         </main>

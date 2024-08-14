@@ -1,16 +1,17 @@
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import { getAnswerById } from "../../Services/answerService";
 import { getQuestionsById } from "../../Services/questionService";
-import { Form, Radio, Space, Tag } from "antd";
-import { CheckCircleOutlined, CloseCircleOutlined } from "@ant-design/icons"
+import { Button, Form, Radio, Space, Tag } from "antd";
+import { CheckCircleOutlined, CloseCircleOutlined, ArrowLeftOutlined, FrownOutlined, SmileOutlined } from "@ant-design/icons"
 import './ResultDetail.scss'
 function ResultDetail() {
     const { id } = useParams();
     const [answerRecord, setAnswerRecord] = useState([]);
     const [questions, setQuestions] = useState([]);
     const [resultRecord,setResultRecord] = useState({});
+    const navigate = useNavigate();
     const handleGrading = (record,ans)=>{
         let totalCorrect = ans.reduce((totalCorrect, element, index) => {
             return totalCorrect + (element.correctAnswer == record.answers[index].answer ? 1 : 0);
@@ -43,15 +44,24 @@ function ResultDetail() {
         return 'layout-result__ans';
     }
     return (
+        <>
+        <Button 
+            className="button-goback" 
+            type="primary" 
+            onClick={()=>{navigate(-1)}}
+            icon = {<ArrowLeftOutlined />}
+        >Quay lại</Button>
         <div className="layout-result">
-            
             <div className="layout-result__title">
                 <h2>Kết quả chủ đề : {answerRecord.nameTopic}</h2>
                 <div className="layout-result__infor">
                 Đúng : <strong>{resultRecord.totalCorrect}</strong>  | 
                  Sai : <strong>{resultRecord.totalUncorrect}</strong> |
                  Tổng số câu : <strong>{resultRecord.totalQuestion}</strong> |
-                 Tỷ lệ đúng : <strong>{resultRecord.rate}%</strong> 
+                 Tỷ lệ đúng : <strong>{resultRecord.rate}%</strong> |
+                 Nhận xét : { resultRecord.totalCorrect > resultRecord.totalUncorrect ?
+                 <span style={{color: 'green'}}>Bạn làm khá tốt! <SmileOutlined /></span>
+                : <span style={{color: 'yellowgreen'}} >Bạn cần cố gắng nhiều hơn! <FrownOutlined /></span> }
                 </div>
             </div>
             <Form name="formResult" initialValues={answerRecord} className="layout-result__form">
@@ -90,6 +100,7 @@ function ResultDetail() {
                 }
             </Form>
         </div>
+    </>
     );
 }
 export default ResultDetail;

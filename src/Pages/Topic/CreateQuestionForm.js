@@ -67,7 +67,6 @@ function CreateQuestionForm(props){
                 open={isModalOpen}
                 onCancel={handleClose}
                 footer={null}
-
             >
                 <Form form={form} name='createQuestionForm' onFinish={handleSubmit}>
                     <Form.Item

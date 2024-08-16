@@ -98,7 +98,9 @@ function ResultDetail() {
                         </Form.Item>
                     })
                 }
+                <Button type="primary" onClick={()=>{navigate(`/topic/${answerRecord.topicId}`)}}>Làm bài lại</Button>
             </Form>
+            
         </div>
     </>
     );
